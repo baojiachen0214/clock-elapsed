@@ -1,0 +1,15 @@
+name: Feature request
+description: Suggest a focused improvement to the Clock companion.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help you do?
+      description: Describe your workflow and the problem. English and 简体中文 are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: How should this complement Apple's Clock?

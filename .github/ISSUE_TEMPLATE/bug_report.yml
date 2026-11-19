@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a display, synchronization or compatibility issue.
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what you expected and steps to reproduce. English and 简体中文 are welcome.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Apple silicon/Intel, system language and display scale.
+    validations:
+      required: true
+  - type: textarea
+    id: clock-state
+    attributes:
+      label: Clock state
+      description: Was Stopwatch visible, hidden, paused, reset or on another tab? Had the Mac slept? Was Accessibility access granted?
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or diagnostics
+      description: Remove personal information. For alignment or color issues, include nearby system menu bar elements for comparison.

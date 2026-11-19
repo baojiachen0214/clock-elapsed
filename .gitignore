@@ -1,0 +1,11 @@
+output/
+.DS_Store
+*.jsonl
+*.log
+*.dSYM/
+.env
+.env.*
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
