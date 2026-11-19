@@ -1,0 +1,9 @@
+"Install Clock Elapsed" = "安装 Clock Elapsed";
+"Add Clock’s stopwatch to your menu bar. Installs for your account; no administrator password needed." = "把系统秒表放进菜单栏。为当前用户安装，无需管理员密码。";
+"Install" = "安装";
+"Cancel" = "取消";
+"Clock Elapsed is installed" = "Clock Elapsed 已安装";
+"Allow Clock Elapsed in System Settings → Privacy & Security → Accessibility, then open Clock → Stopwatch. The companion follows Clock automatically." = "在系统设置 → 隐私与安全 → 辅助功能（部分版本为「设备控制和数据访问」）中允许 Clock Elapsed，然后打开时钟 → 秒表。此后自动跟随时钟启动、退出。";
+"Open Settings" = "打开设置";
+"Done" = "完成";
+"Installation could not finish" = "安装未完成";

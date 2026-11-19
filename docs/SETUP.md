@@ -2,7 +2,13 @@
 
 [English overview](../README.md) · [中文概览](../README.zh-CN.md)
 
-## Requirements and installation
+## Download the installer
+
+The [latest Release](https://github.com/baojiachen0214/clock-elapsed/releases) provides a universal `.dmg` and a ZIP alternative. Open the disk image (or unzip), double-click **Install Clock Elapsed.app**, and click Install. The native installer uses the same per-user setup as `install.sh`, with no Xcode, Python, terminal commands or administrator password required. It does not change Clock's timers. Download checksums are published alongside the assets.
+
+The preview is Developer ID signed but not Apple-notarized. macOS may block its first launch; if you trust the download, follow [Apple's Open Anyway instructions](https://support.apple.com/en-us/102445). Accessibility access still requires a one-time user grant. A notarized release would remove the missing-notarization obstacle, not the need for privacy permission.
+
+## Requirements and source installation
 
 The deployment target is macOS 14.0. Current integration checks were performed on macOS 27.2.1, Apple silicon. Intel builds and other macOS releases need real-device verification, particularly Clock's Accessibility identifiers and navigation.
 
@@ -14,7 +20,7 @@ Install Xcode Command Line Tools if needed with `xcode-select --install`. Then r
 ./install.sh
 ```
 
-The compiler targets the current machine's architecture. The scripts do not build a universal binary. Build output is in `output/ClockElapsed.app`.
+The compiler targets the current machine's architecture by default. `CLOCKELAPSED_ARCHS='arm64 x86_64' ./build.sh` builds a universal binary. Build output is in `output/ClockElapsed.app`.
 
 Installation copies the app to `~/Applications/ClockElapsed.app`, registers it with Launch Services, and creates `~/Library/LaunchAgents/local.clockelapsed.watcher.plist` for the current user. The nested Objective-C watcher receives Clock launch/quit notifications. It stays resident even when Clock is closed; the main companion does not.
 
@@ -64,3 +70,9 @@ The file contains source time/state, readout, width and appearance metadata. Rev
 ## Remove
 
 Run `./uninstall.sh` to stop the companion and remove its LaunchAgent registration. It keeps the installed app. To remove the app as well, delete `~/Applications/ClockElapsed.app` in Finder. Accessibility permission entries can be removed separately in System Settings. No system Clock data is changed.
+
+## Build a release
+
+`./package.sh` builds universal main, watcher and native installer binaries, then creates DMG/ZIP assets and `SHA256SUMS.txt` in `output/releases`. Set `CLOCKELAPSED_SIGNING_IDENTITY` to your own Developer ID Application identity for distribution. With no identity it produces ad-hoc local test builds; do not advertise those as Developer ID signed. `CLOCKELAPSED_NOTARY_PROFILE` can name an existing notarytool keychain profile for notarization; no credentials are stored in source. The current public preview has not been notarized.
+
+`./install.sh --validate output/ClockElapsed.app` checks the signature and generated LaunchAgent plist without changing the installation.

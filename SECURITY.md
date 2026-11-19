@@ -10,4 +10,4 @@ The latest default-branch source is the maintained version during this early pre
 
 ## Distribution
 
-The current project is distributed as source. Local builds are ad-hoc signed unless you supply your own signing identity; no notarized binary is provided. Do not disable macOS security globally to run a build. See [setup](docs/SETUP.md) for the intended installation and signing flow.
+The source and Developer ID signed preview installers are available. The current binary preview is not Apple-notarized. Local builds are ad-hoc signed unless you supply your own signing identity. Do not disable macOS security globally to run a build. See [setup](docs/SETUP.md) for the intended installation and signing flow.

@@ -13,3 +13,7 @@ jobs:
         run: ./test.sh
       - name: Build (ad-hoc signed, no installation)
         run: ./build.sh
+      - name: Validate installer without changing the machine
+        run: |
+          xcrun swiftc -typecheck Installer/main.swift
+          ./install.sh --validate output/ClockElapsed.app

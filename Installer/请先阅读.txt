@@ -1,0 +1,25 @@
+CLOCK ELAPSED · 0.2.1 预览版
+系统秒表，抬眼可见。
+
+1. 双击「Install Clock Elapsed.app」，点击「安装」。
+2. 在系统设置 → 隐私与安全 → 辅助功能中允许 Clock Elapsed。
+   部分系统版本的权限名称为「设备控制和数据访问」。
+3. 打开系统「时钟」的「秒表」页，像平常一样开始计时。
+
+为当前用户安装到 ~/Applications，无需管理员密码、Xcode、Python 或终端命令。
+自动跟随「时钟」启动、退出，小型监听器留在后台等待下一次启动。
+不会修改系统秒表或倒计时数据。
+
+本预览版已使用 Developer ID 签名，但尚未经过 Apple 公证。
+首次打开可能被系统拦截。如果你信任这份下载，请先尝试打开安装器一次，
+再到系统设置 → 隐私与安全中选择「仍要打开」并确认。
+请勿全局关闭 Gatekeeper。Apple 官方说明：
+https://support.apple.com/zh-cn/102445
+
+通用二进制同时包含 Apple silicon 和 Intel 架构。构建目标为 macOS 14+；
+目前仅在 macOS 27.2.1 / Apple silicon 上进行集成检查，其他组合仍需验证。
+「时钟」隐藏后读数可能冻结，本地续计需先完成一次同步。
+
+停用自动跟随可运行源码仓库中的 uninstall.sh，应用本体可另行删除。
+源码、MIT 许可与完整文档：
+https://github.com/baojiachen0214/clock-elapsed

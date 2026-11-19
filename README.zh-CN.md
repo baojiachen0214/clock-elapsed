@@ -39,7 +39,13 @@
 
 ## 开始使用
 
-当前是**早期源码预览**，尚无经过公证的安装包。
+### 下载安装版
+
+前往 **[最新 Release](https://github.com/baojiachen0214/clock-elapsed/releases)** 下载 `.dmg`，打开后双击 **Install Clock Elapsed.app**，点击**安装**即可。无需 Xcode、Python、终端命令或管理员密码。首次授予读取权限，然后打开「时钟 → 秒表」。
+
+安装包是**已通过 Developer ID 签名、尚未经过 Apple 公证的预览版**。首次打开可能被系统拦截；如果你信任这份下载，请先尝试打开一次，再到**系统设置 → 隐私与安全 → 仍要打开**中确认。参见 [Apple 官方说明](https://support.apple.com/zh-cn/102445)。通用二进制同时包含 Apple silicon 与 Intel 架构，目前仅在 macOS 27.2.1 / Apple silicon 上进行集成检查。Release 同时提供 SHA-256 校验文件。
+
+### 从源码构建
 
 ### 1. 编译并安装
 

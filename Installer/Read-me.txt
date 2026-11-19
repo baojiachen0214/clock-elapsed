@@ -1,0 +1,27 @@
+CLOCK ELAPSED · 0.2.1 PREVIEW
+Your stopwatch. Now in the menu bar.
+
+1. Open “Install Clock Elapsed.app” and click Install.
+2. Allow Clock Elapsed in System Settings → Privacy & Security → Accessibility.
+3. Open Apple Clock → Stopwatch. Use Clock as usual.
+
+Installs in ~/Applications for your account. No administrator password, Xcode,
+Python or terminal commands are needed. The companion follows Clock; a small
+watcher remains available for its next launch. No Clock timer data is modified.
+
+This preview is Developer ID signed but NOT Apple-notarized. macOS may block
+the first launch. If you trust this download, try opening the installer once,
+then choose Open Anyway in System Settings → Privacy & Security and confirm.
+Do not disable Gatekeeper globally. Apple’s instructions:
+https://support.apple.com/en-us/102445
+
+Universal binary: Apple silicon and Intel. macOS 14+ deployment target;
+integration-tested on macOS 27.2.1 / Apple silicon only. Other combinations
+need verification. Clock can expose stale readings when hidden; local time
+continuation starts only after an initial synchronization.
+
+To stop automatic following, run uninstall.sh from the source repository;
+delete ~/Applications/ClockElapsed.app separately if desired.
+
+Source, MIT license and full documentation:
+https://github.com/baojiachen0214/clock-elapsed

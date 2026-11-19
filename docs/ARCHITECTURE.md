@@ -39,6 +39,6 @@ These checks do not grant Accessibility access, start/stop Clock's timers, test 
 
 ## Assets and provenance
 
-The app icon is drawn with AppKit paths by `Tools/make-icon.swift`; `docs/assets/app-icon.png` is an export of that source. The menu bar symbol is SF Symbols' `stopwatch`, supplied by macOS at runtime. No Apple Clock application artwork, third-party libraries or upstream Tock source is bundled. Build products, local diagnostics and signing materials are excluded from version control.
+The app icon is drawn with AppKit paths by `Tools/make-icon.swift`; `docs/assets/app-icon.png` is an export of that source. The menu bar symbol is SF Symbols' `stopwatch`, supplied by macOS at runtime. No Apple Clock application artwork, third-party libraries or upstream Tock source is bundled. Build products, local diagnostics and signing materials are excluded from version control. `Installer/main.swift` provides a transient native setup dialog; it runs the bundled `install.sh` against the embedded app. `package.sh` creates universal signed DMG/ZIP distributions. The installer is separate from the windowless companion.
 
 The legacy `local.clockelapsed.prototype` bundle identifier is retained so local updates preserve the existing installation's permissions and menu bar position.

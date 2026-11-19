@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/status-early_preview-8E8E93.svg" alt="Early preview" />
   </p>
   <p><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
-  <p><a href="#why-it-exists">Why it exists</a> · <a href="#get-started">Get started</a> · <a href="docs/ARCHITECTURE.md">How it works</a> · <a href="https://github.com/baojiachen0214/clock-elapsed/issues">Feedback</a></p>
+  <p><a href="https://github.com/baojiachen0214/clock-elapsed/releases">Download</a> · <a href="#why-it-exists">Why it exists</a> · <a href="#get-started">Get started</a> · <a href="docs/ARCHITECTURE.md">How it works</a> · <a href="https://github.com/baojiachen0214/clock-elapsed/issues">Feedback</a></p>
 </div>
 
 ---
@@ -40,7 +40,13 @@ Clock's countdown keeps its own system menu bar item. Clock Elapsed adds the sto
 
 ## Get started
 
-This is an **early source release**. There is no notarized download or packaged installer yet.
+### Download and install
+
+Download the **[latest Release](https://github.com/baojiachen0214/clock-elapsed/releases)**. Open the `.dmg`, double-click **Install Clock Elapsed.app**, and click **Install**. No Xcode, Python, terminal commands or administrator password are needed. Allow the installed app's Accessibility access once, then open Clock → Stopwatch.
+
+The download is a **Developer ID signed preview, not yet Apple-notarized**. macOS may block the first launch. If you trust the download, try opening the installer once, then use **System Settings → Privacy & Security → Open Anyway**. See [Apple's instructions](https://support.apple.com/en-us/102445). Universal binaries include Apple silicon and Intel; only macOS 27.2.1 on Apple silicon has been integration-tested. SHA-256 checksums are included in the Release.
+
+### Build from source
 
 ### 1. Build and install
 
