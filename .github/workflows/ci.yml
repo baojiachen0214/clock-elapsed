@@ -15,5 +15,6 @@ jobs:
         run: ./build.sh
       - name: Validate installer without changing the machine
         run: |
+          zsh -n build.sh install.sh package.sh Tools/notarize.sh
           xcrun swiftc -typecheck Installer/main.swift
           ./install.sh --validate output/ClockElapsed.app

@@ -6,7 +6,7 @@
 
 The [latest Release](https://github.com/baojiachen0214/clock-elapsed/releases) provides a universal `.dmg` and a ZIP alternative. Open the disk image (or unzip), double-click **Install Clock Elapsed.app**, and click Install. The native installer uses the same per-user setup as `install.sh`, with no Xcode, Python, terminal commands or administrator password required. It does not change Clock's timers. Download checksums are published alongside the assets.
 
-The preview is Developer ID signed but not Apple-notarized. macOS may block its first launch; if you trust the download, follow [Apple's Open Anyway instructions](https://support.apple.com/en-us/102445). Accessibility access still requires a one-time user grant. A notarized release would remove the missing-notarization obstacle, not the need for privacy permission.
+Official v0.2.2 downloads are Developer ID signed and Apple-notarized. The payload, installer and disk image are notarized in sequence, with tickets attached and Gatekeeper assessments checked. macOS can still ask you to confirm opening an Internet download; Accessibility access requires a separate one-time user grant. The old v0.2.1 preview was not notarized.
 
 ## Requirements and source installation
 
@@ -37,7 +37,7 @@ CLOCKELAPSED_SIGNING_IDENTITY='Developer ID Application: Your Name (TEAMID)' ./b
 ./install.sh
 ```
 
-No signing identity, certificate or private key is included in the repository. Changing from ad-hoc signing to a stable identity may require granting access once more. These builds are not notarized.
+No signing identity, certificate or private key is included in the repository. Changing from ad-hoc signing to a stable identity may require granting access once more. Local builds are not notarized unless you configure the notarization workflow below.
 
 ## No readout
 
@@ -73,6 +73,16 @@ Run `./uninstall.sh` to stop the companion and remove its LaunchAgent registrati
 
 ## Build a release
 
-`./package.sh` builds universal main, watcher and native installer binaries, then creates DMG/ZIP assets and `SHA256SUMS.txt` in `output/releases`. Set `CLOCKELAPSED_SIGNING_IDENTITY` to your own Developer ID Application identity for distribution. With no identity it produces ad-hoc local test builds; do not advertise those as Developer ID signed. `CLOCKELAPSED_NOTARY_PROFILE` can name an existing notarytool keychain profile for notarization; no credentials are stored in source. The current public preview has not been notarized.
+`./package.sh` builds universal main, watcher and native installer binaries, then creates DMG/ZIP assets and `SHA256SUMS.txt` in `output/releases`. Use your own Developer ID Application signing identity and notarytool credentials for distribution. Credentials are never bundled or stored in source.
+
+```sh
+CLOCKELAPSED_SIGNING_IDENTITY='Developer ID Application: Your Name (TEAMID)' \
+CLOCKELAPSED_NOTARY_PROFILE='your-keychain-profile' \
+CLOCKELAPSED_RELEASE=1 ./package.sh
+```
+
+Alternatively, supply `CLOCKELAPSED_NOTARY_KEY` (a local API key path), `CLOCKELAPSED_NOTARY_KEY_ID`, and `CLOCKELAPSED_NOTARY_ISSUER` for a team key. Individual API keys omit the issuer. Keep the private key outside the repository.
+
+Official release mode refuses to run without both a signing identity and notarization credentials. `Tools/notarize.sh` requires Apple's `Accepted` verdict and saves receipts/logs only in ignored `output/notary/`. The pipeline notarizes and staples the payload first, then the installer, then the final DMG; each stage validates tickets and Gatekeeper acceptance. Without credentials, packaging creates a development archive, not an official notarized release.
 
 `./install.sh --validate output/ClockElapsed.app` checks the signature and generated LaunchAgent plist without changing the installation.

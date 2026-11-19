@@ -7,7 +7,7 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-34A853.svg" alt="MIT license" /></a>
     <img src="https://img.shields.io/badge/platform-macOS-24292F.svg" alt="macOS" />
     <img src="https://img.shields.io/badge/built_with-Swift_%2B_Objective--C-F05138.svg" alt="Swift and Objective-C" />
-    <img src="https://img.shields.io/badge/status-early_preview-8E8E93.svg" alt="Early preview" />
+    <img src="https://img.shields.io/badge/status-notarized-34A853.svg" alt="Apple-notarized release" />
   </p>
   <p><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
   <p><a href="https://github.com/baojiachen0214/clock-elapsed/releases">Download</a> · <a href="#why-it-exists">Why it exists</a> · <a href="#get-started">Get started</a> · <a href="docs/ARCHITECTURE.md">How it works</a> · <a href="https://github.com/baojiachen0214/clock-elapsed/issues">Feedback</a></p>
@@ -44,7 +44,7 @@ Clock's countdown keeps its own system menu bar item. Clock Elapsed adds the sto
 
 Download the **[latest Release](https://github.com/baojiachen0214/clock-elapsed/releases)**. Open the `.dmg`, double-click **Install Clock Elapsed.app**, and click **Install**. No Xcode, Python, terminal commands or administrator password are needed. Allow the installed app's Accessibility access once, then open Clock → Stopwatch.
 
-The download is a **Developer ID signed preview, not yet Apple-notarized**. macOS may block the first launch. If you trust the download, try opening the installer once, then use **System Settings → Privacy & Security → Open Anyway**. See [Apple's instructions](https://support.apple.com/en-us/102445). Universal binaries include Apple silicon and Intel; only macOS 27.2.1 on Apple silicon has been integration-tested. SHA-256 checksums are included in the Release.
+Official **v0.2.2** downloads are **Developer ID signed and Apple-notarized**, with tickets attached to the app, installer and disk image. macOS may still ask you to confirm opening an Internet download; Accessibility access remains a separate one-time permission. Universal binaries include Apple silicon and Intel; only macOS 27.2.1 on Apple silicon has been integration-tested. SHA-256 checksums are included in the Release.
 
 ### Build from source
 

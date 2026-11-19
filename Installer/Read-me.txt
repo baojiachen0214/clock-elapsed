@@ -1,4 +1,4 @@
-CLOCK ELAPSED · 0.2.1 PREVIEW
+CLOCK ELAPSED · 0.2.2
 Your stopwatch. Now in the menu bar.
 
 1. Open “Install Clock Elapsed.app” and click Install.
@@ -9,11 +9,11 @@ Installs in ~/Applications for your account. No administrator password, Xcode,
 Python or terminal commands are needed. The companion follows Clock; a small
 watcher remains available for its next launch. No Clock timer data is modified.
 
-This preview is Developer ID signed but NOT Apple-notarized. macOS may block
-the first launch. If you trust this download, try opening the installer once,
-then choose Open Anyway in System Settings → Privacy & Security and confirm.
-Do not disable Gatekeeper globally. Apple’s instructions:
-https://support.apple.com/en-us/102445
+Official 0.2.2 release downloads are Developer ID signed and Apple-notarized.
+The installer, app and disk image include notarization tickets. macOS may still
+ask you to confirm opening an Internet download. Accessibility permission is
+a separate one-time grant; notarization does not grant access on your behalf.
+Locally built development archives may have different signing/notarization.
 
 Universal binary: Apple silicon and Intel. macOS 14+ deployment target;
 integration-tested on macOS 27.2.1 / Apple silicon only. Other combinations

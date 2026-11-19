@@ -7,7 +7,7 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-34A853.svg" alt="MIT 许可" /></a>
     <img src="https://img.shields.io/badge/platform-macOS-24292F.svg" alt="macOS" />
     <img src="https://img.shields.io/badge/built_with-Swift_%2B_Objective--C-F05138.svg" alt="Swift 和 Objective-C" />
-    <img src="https://img.shields.io/badge/status-early_preview-8E8E93.svg" alt="早期预览" />
+    <img src="https://img.shields.io/badge/status-notarized-34A853.svg" alt="已通过 Apple 公证" />
   </p>
   <p><a href="README.md">English</a> · <strong>简体中文</strong></p>
 </div>
@@ -43,7 +43,7 @@
 
 前往 **[最新 Release](https://github.com/baojiachen0214/clock-elapsed/releases)** 下载 `.dmg`，打开后双击 **Install Clock Elapsed.app**，点击**安装**即可。无需 Xcode、Python、终端命令或管理员密码。首次授予读取权限，然后打开「时钟 → 秒表」。
 
-安装包是**已通过 Developer ID 签名、尚未经过 Apple 公证的预览版**。首次打开可能被系统拦截；如果你信任这份下载，请先尝试打开一次，再到**系统设置 → 隐私与安全 → 仍要打开**中确认。参见 [Apple 官方说明](https://support.apple.com/zh-cn/102445)。通用二进制同时包含 Apple silicon 与 Intel 架构，目前仅在 macOS 27.2.1 / Apple silicon 上进行集成检查。Release 同时提供 SHA-256 校验文件。
+官方 **v0.2.2** 下载已通过 **Developer ID 签名与 Apple 公证**，应用、安装器和磁盘映像均附有公证票据。系统可能仍会要求确认打开互联网下载的应用；读取权限依然需要用户单独授予一次。通用二进制同时包含 Apple silicon 与 Intel 架构，目前仅在 macOS 27.2.1 / Apple silicon 上进行集成检查。Release 同时提供 SHA-256 校验文件。
 
 ### 从源码构建
 
